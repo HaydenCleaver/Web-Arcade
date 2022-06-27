@@ -19,7 +19,7 @@ This website is being designed to include a small collection web games.  The gam
 
 Our MVP functionality would be the completion of tracking user score and the capability to play the reflex game.
 
-Our stretch goal is to implement a randomized word selection for the crossword, as well as creating other small games.
+Our stretch goal is to implement a randomized word selection for the crossword, increased difficulties for the reflex game, as well as creating other small games.
 
 ## Functional Requirements
 
