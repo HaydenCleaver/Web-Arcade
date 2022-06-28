@@ -25,3 +25,5 @@ As a user, I want to navigate the website seemlessly and enjoy the experience.
 4. Ensure that the user is able to navigate to the Contributers page.
 
 5. Esnure that the user enjoys the experience.
+
+## Team Members Rexie, Caelin, Wendy, Hayden
