@@ -12,38 +12,45 @@ function loadCrosswordScore (){
 }
 
 function renderScoreReflex(scoreArray){
-    let userName = [];
-    let scoreResults = [];
 
+    let scoreResults = scoreArray.sort((a,b) => b.score - a.score);
+    scoreResults.splice(0,3);
 
-    for (let i = 0; i < scoreArray.length; i++);{
-    userName = scoreArray[i].name;
-    scoreResults = scoreArray[i].score;
-    let resultTest = `${userName} : ${scoreResults}`
+    for (let i = 0; i < scoreResults.length; i++){
 
-    let chartEl = document.getElementById('reflexScore');
-    let resultEl = documnt.createElement('li');
-    chartEl.appendChild(resultEl);
-    resultEl.textContent = resultTest;
+        let resultTest = `${scoreResults[i].name} : ${scoreResults[i].score}`
+        let chartEl = document.getElementById('reflexScore');
+        let resultEl = documnt.createElement('li');
+        chartEl.appendChild(resultEl);
+        resultEl.textContent = resultTest;
     }
-}
 
 function renderScoreCrossword(scoreArray){
-    let userName = [];
-    let scoreResults = [];
 
+    let scoreResults = scoreArray.sort((a,b) => b.score - a.score);
+    scoreResults.splice(0,3);
 
-    for (let i = 0; i < scoreArray.length; i++);{
-    userName = scoreArray[i].name;
-    scoreResults = scoreArray[i].score;
-    let resultTest = `${userName} : ${scoreResults}`
+    for (let i = 0; i < scoreResults.length; i++){
 
-    let chartEl = document.getElementById('crosswordScore');
-    let resultEl = documnt.createElement('li');
-    chartEl.appendChild(resultEl);
-    resultEl.textContent = resultTest;
+        let resultTest = `${scoreResults[i].name} : ${scoreResults[i].score}`
+        let chartEl = document.getElementById('crosswordScore');
+        let resultEl = documnt.createElement('li');
+        chartEl.appendChild(resultEl);
+        resultEl.textContent = resultTest;
     }
+
+    // for (let i = 0; i < scoreArray.length; i++) {
+    // userName = scoreArray[i].name;
+    // scoreResults = scoreArray[i].score;
+    
+    // let resultTest = `${userName} : ${scoreResults}`
+    // let chartEl = document.getElementById('crosswordScore');
+    // let resultEl = documnt.createElement('li');
+    // chartEl.appendChild(resultEl);
+    // resultEl.textContent = resultTest;
+    // } 
 }
 
 // renderScoreReflex(reflexScore);
 // renderScoreCrossword(crosswordScore);
+
