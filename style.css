@@ -1,0 +1,16 @@
+.grid {
+  width: 606px;
+  height: 606px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+border: solid black 1px;
+width:200px;
+height: 200px;
+}
+
+.box {
+    background-color: aquamarine;
+}
