@@ -24,6 +24,7 @@ function renderScoreReflex(scoreArray){
         chartEl.appendChild(resultEl);
         resultEl.textContent = resultTest;
     }
+}
 
 function renderScoreCrossword(scoreArray){
 
@@ -38,8 +39,12 @@ function renderScoreCrossword(scoreArray){
         chartEl.appendChild(resultEl);
         resultEl.textContent = resultTest;
     }
+}
 
-    // for (let i = 0; i < scoreArray.length; i++) {
+// renderScoreReflex(reflexScore);
+// renderScoreCrossword(crosswordScore);
+
+// for (let i = 0; i < scoreArray.length; i++) {
     // userName = scoreArray[i].name;
     // scoreResults = scoreArray[i].score;
     
@@ -49,8 +54,3 @@ function renderScoreCrossword(scoreArray){
     // chartEl.appendChild(resultEl);
     // resultEl.textContent = resultTest;
     // } 
-}
-
-// renderScoreReflex(reflexScore);
-// renderScoreCrossword(crosswordScore);
-
