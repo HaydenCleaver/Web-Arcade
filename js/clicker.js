@@ -15,11 +15,11 @@ startButton.addEventListener('click', function (event) {
     startScreen.style.visibility = 'hidden';
     
     //set how fast spawn is here
-    let start = setInterval(createButton, 600);
+    let start = setInterval(createButton, 1000);//<--Spawn rate
     timer();
     setTimeout(() => {
         clearInterval(start);
-    }, timerNum * 1000);;
+    }, timerNum * 1000);
 
 });
 
@@ -35,7 +35,6 @@ restartButton.addEventListener('click', function () {
 //setting global score variable as well as array to save data
 let score = 0;
 let allScores = readScore()|| [];
-console.log(allScores);
 
 //Click sound effect
 function playSound() {
@@ -53,7 +52,6 @@ function timer() {
     let timerInterval = setInterval(() => {
         timerNum--;
         timerEl.textContent = timerNum;
-        console.log(timerNum);
 
         //when timer hits 0
         timerWarning();
@@ -127,16 +125,15 @@ function getRandomInt(min, max) {
 
 // creating button and setting random ints for positions 
 function createButton() {
-    let top = getRandomInt(0, 91.5);
+    let top = getRandomInt(0, 85);
     let right = getRandomInt(0, 91.5);
     let left = getRandomInt(0, 91.5);
-    let bottom = getRandomInt(0, 91.5);
+    let bottom = getRandomInt(0, 85);
     let button = new Button(top, right, left, bottom);
 }
 //Currently not being used
 function clearTheBoard() {
    let pieces = document.querySelectorAll('.gamePiece')
-console.log(pieces) 
 pieces.forEach(piece =>{
     piece.remove();
 })
@@ -156,7 +153,6 @@ function readScore() {
     if (localStorage.getItem('allScores')) {
         savedScore = JSON.parse(localStorage.getItem('allScores'));
         return savedScore;
-        //    console.log(allScores)
     }
 }
 
@@ -167,6 +163,39 @@ function calculateHighScore(){
             highScore = element;
         }
     });
+    let save = JSON.stringify(highScore);
+    localStorage.setItem('highScore',save);
     return highScore;
 };
+let formEl = document.getElementById("userInput")
 
+//New user constructor
+
+function User(name,userScore){
+this.name = name;
+this.score = userScore;
+
+}
+
+let infoEl =readUser() || [];//<---- User data array
+formEl.addEventListener('submit', function(event){
+    event.preventDefault();
+    let UserName = event.target.initials.value;
+    let newUser = new User(UserName,score);
+    infoEl.push(newUser);
+    userSave(infoEl);
+})
+//Saving user data
+function userSave(data){
+    let saveData = JSON.stringify(data);
+    localStorage.setItem('user',saveData);
+}
+//reading user data to save to an array
+function readUser() {
+     let savedUser = [];
+    if (localStorage.getItem('user')) {
+        savedUser = JSON.parse(localStorage.getItem('user'));
+        return savedUser;
+    } else 
+    return savedUser;
+}
