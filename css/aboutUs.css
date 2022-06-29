@@ -1,0 +1,61 @@
+/* Style color of card that each member display with text, varies rotating angles at 45 deggrees
+rotateX, rotateY, rotateZ, rotateX
+Hayden: #45bb89    
+Caelin:#3d82ab
+Wendy: #f8981d
+Rexie: #91d4c2
+Background: #003853
+Button: #003e19
+script/text: white
+  */
+
+.panel--color {
+transform: perspective (400px);
+transform: rotateX(45deg);
+transform: rotateY(45deg);
+transform: rotateZ(45deg);
+transform: rotateX(45deg);
+}
+
+.scene {
+    width:200px;
+    height:260px;
+    perspective:600px;
+}
+
+.card {
+    width:100%;
+    height:100%;
+    position:relative;
+    transition:transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card_face {
+    position: absolute;
+    height:100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+/* how the cards flip */
+.card_face --front {
+background-color:#003853;
+}
+
+.card_face --back {
+    background-color:03853;
+    transform: rotateX();
+    transform: rotateY();
+    transform: rotateZ();
+    transform: rotateX();
+}
+
+/* corresponding style */
+.card.ls-flipped {
+    transform: rotateY(180deg);
+}
+
+button {
+    color: #69491a;
+}
