@@ -1,0 +1,92 @@
+#Box1{
+    height:100px;
+    width: 100px;
+    background: red;
+    visibility: visible;
+    transition: all 0.3s ease;
+    color: white;
+    text-align: center;
+}
+
+#Box2{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    margin: 1rem auto;
+}
+#Box3{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    margin: 1rem auto;
+}
+#Box4{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    margin: 1rem auto;
+}
+body{
+    height: 50rem;
+}
+div.gamePiece{
+    transition:all 0.3s ease;
+    display: inline-block;
+    position: absolute;
+    background: blue;
+    height: 50px;
+    width: 50px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+div.gamePiece:hover{
+    background:#53a7ea
+}
+section{
+    position: absolute;
+    width: 50rem;
+    height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+    text-align: center;
+    left: 0;
+    right: 0;
+    border: black solid thick;
+}
+h2{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-size: 40px;
+}
+#welcome{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: navy;
+    border-radius: 3rem;
+    opacity: 80%;
+}
+#start{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 40px;
+    background: teal;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    border-radius: 20px;
+    opacity: 100%;
+    color: antiquewhite;
+    
+}
+#start:hover{
+    background:#53a7ea;
+    transition: all 0.2s ease;
+}
