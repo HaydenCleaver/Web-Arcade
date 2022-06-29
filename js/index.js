@@ -5,7 +5,7 @@ function loadReflexScore (){
     let stringStore = localStorage.getItem('user');
     return JSON.parse(stringStore);
 }
-console.log(reflexScore)
+
 function loadCrosswordScore (){
     let stringStore = localStorage.getItem('');
     return JSON.parse(stringStore);
@@ -29,12 +29,12 @@ function renderScoreReflex(scoreArray){
 function renderScoreCrossword(scoreArray){
 
     let scoreResults = scoreArray.sort((a,b) => b.score - a.score);
-    scoreResults.splice(0,3);
+    scoreResults.splice(3);
 
     for (let i = 0; i < scoreResults.length; i++){
 
         let resultTest = `${scoreResults[i].name} : ${scoreResults[i].score}`
-        let chartEl = document.getElementById('crosswordScore');
+        let chartEl = document.getElementById('crosswordChart');
         let resultEl = documnt.createElement('li');
         chartEl.appendChild(resultEl);
         resultEl.textContent = resultTest;
