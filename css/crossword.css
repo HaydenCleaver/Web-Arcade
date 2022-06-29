@@ -1,5 +1,10 @@
 /* button colors */
 
+h1{
+    text-align: center;
+}
+
+
 
 body {
 background: #33c4f5;;
@@ -19,9 +24,10 @@ p {
 /* style for puzzle */
 #puzzle {
     padding: 20px;
-    float: left;
-    margin: 30px 20px;
-    width: 500px;
+    display: inline-block;
+    align-content: center;
+    margin-left: 35%;
+    width: 600px;
 }
 
 #puzzle div {
@@ -29,14 +35,27 @@ p {
     margin: 0 auto;
 }
 
-#puzzle .puzzleSquare {
-    height: 30px;
-    width:30px;
+.puzzleSquare {
+    height: 40px;
+    width:40px;
     text-transform: uppercase;
+    text-align: center;
+    background-color: #fcfcfc;
+    border: 0;
+    margin-left:0px;
+    margin-right:0px;
+    outline: black thin solid;
+    font-family: Arial, Helvetica, sans-serif 1em;
+    color: black;
+}
+
+.emptySquare {
+    height: 40px;
+    width:40px;
+    text-transform: uppercase;
+    text-align: center;
     background-color: #33c4f5;
     border: 0;
-    outline: none;
-    font-family: Arial, Helvetica, sans-serif 1em;
     color: #33c4f5;
 }
 
