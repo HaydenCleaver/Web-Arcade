@@ -6,11 +6,16 @@ let startButton = document.getElementById('start');
 let gameOver = document.getElementById('finalScore');
 let finalScoreEl = document.getElementById('showFinalScore');
 let restartButton = document.getElementById('restart');
+let highScoreEl = document.getElementById('highScore');
+
 
 //Game starting event listener
+
 startButton.addEventListener('click', function (event) {
     startScreen.style.visibility = 'hidden';
-    let start = setInterval(createButton, 200);
+    
+    //set how fast spawn is here
+    let start = setInterval(createButton, 600);
     timer();
     setTimeout(() => {
         clearInterval(start);
@@ -27,7 +32,10 @@ restartButton.addEventListener('click', function () {
     timerEl.style.color = 'black';
 });
 
-
+//setting global score variable as well as array to save data
+let score = 0;
+let allScores = readScore()|| [];
+console.log(allScores);
 
 //Click sound effect
 function playSound() {
@@ -35,8 +43,9 @@ function playSound() {
     sound.volume = 0.1;
     sound.play();
 }
-//set Timer length here
-let timerNum = 20;
+
+
+let timerNum = 30;//<----set Timer length here
 let timerEl = document.getElementById('timer');
 timerEl.textContent = timerNum;
 function timer() {
@@ -49,15 +58,20 @@ function timer() {
         //when timer hits 0
         timerWarning();
         if (timerNum === 0) {
+            clearTheBoard();
             clearInterval(timerInterval);
-
+            allScores.push(score);
+            saveScore(allScores);
             //delay for showing final score
             setTimeout(() => {
                 gameOver.style.visibility = "visible";
             }, 1000);
-
-            finalScoreEl.textContent = score;
             ding2.play();
+            finalScoreEl.textContent = score;
+            highScoreEl.textContent = calculateHighScore();
+
+
+
         }
     }, 1000);
 
@@ -76,8 +90,8 @@ function timerWarning() {
 function stopGame(game) {
     clearInterval(game);
 }
-//setting global score variable
-let score = 0;
+
+
 
 //button constructor
 function Button(pos1, pos2, pos3, pos4) {
@@ -94,7 +108,7 @@ function Button(pos1, pos2, pos3, pos4) {
         //this decides how fast the buttons disappear
         setTimeout(() => {
             this.obj.remove()
-        }, 1000);
+        }, 2000);
     this.obj.addEventListener('click', function (event) {
         playSound();
         score += 1;
@@ -116,12 +130,43 @@ function createButton() {
     let top = getRandomInt(0, 91.5);
     let right = getRandomInt(0, 91.5);
     let left = getRandomInt(0, 91.5);
-    let bottom = getRandomInt(0, 98);
-    let button = new Button(top, right, left, bottom)
+    let bottom = getRandomInt(0, 91.5);
+    let button = new Button(top, right, left, bottom);
+}
+//Currently not being used
+function clearTheBoard() {
+   let pieces = document.querySelectorAll('.gamePiece')
+console.log(pieces) 
+pieces.forEach(piece =>{
+    piece.remove();
+})
+//  pieces.target.remove();
 }
 
-function clearTheBoard(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
+//saving and loading score functions
+
+function saveScore(data) {
+    let saveData = JSON.stringify(data);
+    localStorage.setItem('allScores', saveData);
+}
+
+function readScore() {
+    
+    let savedScore = [];
+    if (localStorage.getItem('allScores')) {
+        savedScore = JSON.parse(localStorage.getItem('allScores'));
+        return savedScore;
+        //    console.log(allScores)
     }
 }
+
+function calculateHighScore(){
+    let highScore = 0
+    allScores.forEach(element => {
+        if (element > highScore) {
+            highScore = element;
+        }
+    });
+    return highScore;
+};
+
