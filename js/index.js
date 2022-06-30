@@ -1,4 +1,5 @@
 let reflexScore = loadReflexScore() || [];
+
 let crosswordScore = loadCrosswordScore() || [];
 
 function loadReflexScore (){
