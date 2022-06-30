@@ -10,8 +10,9 @@ div.gamePiece{
     background: blue;
     height: 80px;
     width: 80px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 30px;
 }
 div.gamePiece:hover{
     background:#53a7ea
@@ -26,7 +27,7 @@ section{
     text-align: center;
     left: 0;
     right: 0;
-    border: black solid thick;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     
 }
 h2{
@@ -42,34 +43,50 @@ h2{
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background: navy;
-    border-radius: 3rem;
-    opacity: 80%;
+    background: rgb(218, 216, 216);
+    opacity: 90%;
     transition: all 0.2s ease;
 }
 .button{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 100%);
+    top: 40%;
+    left: 40%;
     width: 140px;
     height: 80px;
-    background: teal;
+    background: rgb(15, 70, 102);
     text-align: center;
     font-size: 30px;
     vertical-align: middle;
     line-height: 80px;
-    border-radius: 70px;
-    opacity: 100%;
+    border-radius: 20px;
     color: antiquewhite;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+#easy{ 
+    left: 10%; 
     
-    
+}
+
+#hard{
+    left: 70%;
 }
 .button:hover{
     background:#53a7ea;
     color: black;
-    transition: all 0.2s ease;
+    animation: wiggle 1s linear infinite;
+}
+
+@keyframes wiggle {
+    0% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(0,10%);
+    }
+   100% {
+
+   }
 }
 #finalScore{
     position: absolute;
@@ -79,12 +96,68 @@ h2{
     width: 100%;
     height: 100%;
     background: navy;
-    border-radius: 3rem;
     opacity: 80%;
     color: antiquewhite;
     font-size: 35px;
     visibility: hidden;
 }
+#restart{
+    top:70%;
+    left: 41.1%;
+    opacity: 100%;
+    
+}
 #scoreEl{
     margin-top: 4px;
 }
+input[type=text]{
+    width:10%;
+    height: 30px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase
+}
+input[type=submit]{
+    cursor: pointer;
+    background: rgb(15, 70, 102);
+    color: antiquewhite;
+    size: 20px 30px;
+}
+.leftRight {
+    width: 100px;
+    height: 100px;
+    
+    animation-name: leftRight;
+    animation-duration: .5s;
+  }
+  .upDown {
+    width: 100px;
+    height: 100px;
+    
+    animation-name: upDown;
+    animation-duration: .5s;
+  }
+  
+
+  @keyframes leftRight {
+    0% {
+        transform: translate(0);
+      }
+      25%{
+        transform: translateX(2px);
+      }
+      50% {
+        transform: translatex(-2px);
+      }
+  }
+  @keyframes upDown {
+    0% {
+        transform: translate(0);
+      }
+      25%{
+        transform: translateY(2px);
+      }
+      50% {
+        transform: translateY(-2px);
+      }
+  }
