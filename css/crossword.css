@@ -1,0 +1,295 @@
+/* button colors */
+
+
+header {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #58F564;
+    background: #2c3233;
+    width: 100%;
+    height: 8rem;
+  }
+  
+  header>div {
+    margin-top: 30px;
+    font-size: 2rem;
+    -webkit-text-stroke: white;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #1d1a1a, 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #000000,
+            0 0 10px #3be652, 0 0 10px #30d42b, 0 0 10px #37d628;
+    }
+  
+    to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 20px #295a29, 0 0 20px #21eb3c, 0 0 20px #1bdd25,
+            0 0 10px #17c217, 0 0 20px #2df812, 0 0 20px #63e00f;
+    }
+  }
+  
+  nav {
+    margin-top: 30px;
+  }
+  
+  nav>a {
+    margin: 30px;
+    color: #58F564
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    -webkit-text-stroke: white;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+ 
+
+body {
+background: #33c4f5;;
+}
+
+main{
+    display:grid;
+    grid-template-rows: 600px;
+    grid-template-columns: repeat(3, 545px);
+    justify-content: center;
+}
+
+.puzzlewrap {
+    width: 850px;
+    margin: 50px auto;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif 22pt; 
+    color: black;
+}
+
+/* style for puzzle */
+#puzzle {
+    grid-column: 2;
+    justify-items: start;
+    display: inline-block;
+    /* align-content: center; */
+    width: 545px;
+    height: 540px;
+}
+
+#puzzle div {
+    display: grid;
+    grid-template-rows: repeat(11, 44px);
+    grid-template-columns: repeat(12,42px);
+    width: 100%;
+    margin: 0 auto;
+}
+
+#one {
+    float:none;
+    position: absolute;
+    left: 690px;
+    overflow:hidden;
+}
+
+#two {
+    float:none;
+    position: absolute;
+    left: 857px;
+    top: 260px;
+    overflow:hidden;
+}
+
+#three{
+    float:none;
+    position: absolute;
+    left: 732px;
+    top: 395px;
+    overflow:hidden;
+}
+
+#four{
+    float:none;
+    position: absolute;
+    left: 775px;
+    top: 480px;
+    overflow:hidden;
+}
+
+#five{
+    float:none;
+    position: absolute;
+    left: 942px;
+    top: 570px;
+    overflow:hidden;
+}
+#six {
+    float:none;
+    position: absolute;
+    left: 732px;
+    overflow:hidden;
+}
+
+#seven{
+    float:none;
+    position: absolute;
+    left: 857px;
+    overflow:hidden;
+}
+
+#eight{
+    float:none;
+    position: absolute;
+    left: 1026px;
+    top: 260px;
+    overflow:hidden;
+}
+
+#nine {
+    float:none;
+    position: absolute;
+    left: 1110px;
+    top: 260px;
+    overflow:hidden;
+}
+#ten{
+    float:none;
+    position: absolute;
+    left: 773px;
+    top: 395px;
+    overflow:hidden;
+}
+
+.puzzleSquare {
+    height: 40px;
+    width:40px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #fcfcfc;
+    border: 0;
+    margin-left:0px;
+    margin-right:0px;
+    outline: black thin solid;
+    font-family: Arial, Helvetica, sans-serif 1em;
+    color: black;
+}
+
+.emptySquare {
+    height: 40px;
+    width:40px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #33c4f5;
+    border: 0;
+    color: #33c4f5;
+}
+
+#clues {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 50px;
+}
+
+#clues > div {
+    grid-template-rows: auto;
+    border: solid thin black;
+    background-color: #b8e5f5;
+
+}
+
+#user{
+    display:grid;
+    grid-column: 2;
+}
+#score {
+    grid-column: 2;
+    justify-self: center;
+}
+button::-moz-focus-inner {
+    border: none;
+    outline: none;
+}
+
+/* selected indicates when a square has been selected */
+
+#puzzle .selected {
+    color: #33c4f5;
+    outline: none; }  
+.blue-input:focus{
+    border: none;
+}
+
+/* indicates that square is part of a word that has been found */
+
+#puzzle .found {
+    color: #fcec09;
+}
+
+#puzzle .solved {
+    color: #faa200;
+}
+
+#puzzle .complete {
+    background-color: #fcfcf9;
+}
+
+/* style for the word list */
+
+#word {
+    width: 250px;
+    color: gray;
+    float: left;
+    margin-top: 37px;
+}
+
+#words ul {
+    list-style-type: none;
+}
+
+#words li {
+    padding: 0 0 7px;
+    font-family: sans-serif 1em; 
+    display: block;
+    float: left;
+    width: 100px;
+}
+/* indicates that the word has b een found  */
+#words .wordFound {
+    text-decoration: line-through;
+    color: black;
+}
+
+/* style for the button */
+#solve {
+    margin: 30px 30px 0 40px;
+    background: transparent
+    #c38334;
+    padding: 10px 20px;
+    border: 2px solid; color: #eb744b;
+    border-radius: 25px;
+opacity: 5;
+    transition: opacity .25s ease-in;
+    
+}
+    a :hover,  :gameSolve {
+        opacity: 1;
+    }
+
+
+
+
+
+
+    

@@ -1,0 +1,165 @@
+/* Style color of card that each member display with text, varies rotating angles at 45 deggrees
+rotateX, rotateY, rotateZ, rotateX
+Hayden: #45bb89    
+Caelin:#3d82ab
+Wendy: #f8981d
+Rexie: #91d4c2
+Background: #003853
+Button: #003e19
+script/text: white
+  */
+
+.panel--color {
+    transform: perspective (400px) rotateX(45deg);
+    transform: perspective (400px) rotateY(45deg);
+    transform: perspective (400px) rotateZ(45deg);
+    transform: perspective (400px) rotateX(45deg);
+}
+
+.scene {
+    width: 200px;
+    height: 260px;
+    perspective: 600px;
+    background: #40D2F5;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card_face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+/* how the cards flip */
+.card_face--front {
+    background-color: #003853;
+}
+
+.card_face--back {
+    background-color: 03853;
+    transform: rotateX();
+    transform: rotateY();
+    transform: rotateZ();
+    transform: rotateX();
+}
+
+/* corresponding style */
+.card { 
+    transform-origin: center right; 
+}
+
+.card.ls-flipped {
+    transform: rotateY(180deg);
+}
+
+button {
+    color: #69491a;
+}
+
+header {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #58F564;
+    background: #2c3233;
+    width: 100%;
+    height: 8rem;
+}
+
+header>div {
+    margin-top: 30px;
+    font-size: 2rem;
+    -webkit-text-stroke: white;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #1d1a1a, 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #000000,
+            0 0 10px #3be652, 0 0 10px #30d42b, 0 0 10px #37d628;
+    }
+
+    to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 20px #295a29, 0 0 20px #21eb3c, 0 0 20px #1bdd25,
+            0 0 10px #17c217, 0 0 20px #2df812, 0 0 20px #63e00f;
+    }
+}
+
+nav {
+    margin-top: 30px;
+}
+
+nav>a {
+    margin: 30px;
+    color: #58F564
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    -webkit-text-stroke: white;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+body {
+    background: white;
+    height: 200rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+section {
+    background: #238FA8;
+    padding: 3rem;
+    width: 50rem;
+    border-radius: 20px;
+    font-size: 20px;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#articleTitle {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#articleTitle>h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #F56A4B;
+}
+
+.image {
+    float: left;
+    margin-right: 50px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+}
+
+#Hayden>div {
+    text-align: left;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Arcade</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/clicker.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>WEB-ARCADE</h1>
+        </div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="clicker.html">REFLEX</a>
+            <a href="Memorize">MEMORIZE</a>
+            <a href="crossword.html">CROSSWORD</a>
+            <a href="aboutUs.html">ABOUT US</a>
+        </nav>
+    </header>
+    <h2 id="Timer">Time left: <span id="timer"> </span></h2>
+    <section id="Game">
+        <div id="welcome">
+            <div class="button" id="easy">EASY</div>
+            <div class="button" id="medium">MEDIUM</div>
+            <div class="button" id="hard">HARD</div>
+        </div>
+        <div id="finalScore">
+            <p style="margin-bottom: 0px;">Your final score is <br><span id="showFinalScore"></span></p>
+            <p id="scoreEl">Highscore: <span id="highScore"></span></p>
+            <div class="button" id="restart" >
+                RESTART
+            </div>
+            <div>
+                <form id="userInput">
+                    <label for="initials">Enter Initials: </label><br>
+                    <input type="text" id="initials" maxlength="3" name="initials" autocomplete="off"><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        
+    </section>
+
+    <script src="js/clicker.js"></script>
+</body>
+
+</html>

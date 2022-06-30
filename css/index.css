@@ -1,0 +1,104 @@
+header {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #58F564;
+    background: #2c3233;
+    width: 100%;
+    height: 8rem;
+  }
+  
+  header>div {
+    margin-top: 30px;
+    font-size: 2rem;
+    -webkit-text-stroke: white;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #1d1a1a, 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #000000,
+            0 0 10px #3be652, 0 0 10px #30d42b, 0 0 10px #37d628;
+    }
+  
+    to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 20px #295a29, 0 0 20px #21eb3c, 0 0 20px #1bdd25,
+            0 0 10px #17c217, 0 0 20px #2df812, 0 0 20px #63e00f;
+    }
+  }
+  
+  nav {
+    margin-top: 30px;
+  }
+  
+  nav>a {
+    margin: 30px;
+    color: #58F564
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    -webkit-text-stroke: white;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  
+  
+
+
+/* color will gradient from black to gray */
+body {
+/* padding-top: 10rem; */
+padding-bottom: 10rem- 72px;
+background-image: linear-gradient(180deg, #238fa8, #40d2f5); 
+background-repeat: no repeat;
+background-position: center;
+background-attachment: scroll;
+background-size: cover;
+}
+
+/* For browsers that do not support gradients */
+#grad1 {
+    height: 100px;
+    background-color: #238fa8; 
+    background-image: linear-gradient(180deg, #238fa8, #40d2f5);
+}
+
+/* all caps for text */
+h1 {
+    text-transform: uppercase;
+    color: #58f564;
+}
+
+body>a[href] {
+    color: rgb(10, 67, 59);
+    background-color: blue;
+    text-decoration: none;
+}
+
+h3 {
+    text-transform: capitalize;
+    color: blue;
+}
+
+h5 {
+    text-transform: capitalize;
+    color: blue;
+}
+
+/* ol {list-style: none; counter-reset: li}
+li::before {content: counter(li); color: aquamarine;
+    display: inline-block; width: 1em;
+    margin-left: -1em}
+    li {counter-increment: li}     */

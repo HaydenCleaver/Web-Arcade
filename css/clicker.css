@@ -1,0 +1,224 @@
+
+header {
+  display: inline-block;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  color: #58F564;
+  background: #2c3233;
+  width: 100%;
+  height: 8rem;
+}
+
+header>div {
+  margin-top: 30px;
+  font-size: 2rem;
+  -webkit-text-stroke: white;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+      text-shadow: 0 0 10px #1d1a1a, 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #000000,
+          0 0 10px #3be652, 0 0 10px #30d42b, 0 0 10px #37d628;
+  }
+
+  to {
+      text-shadow: 0 0 20px #eeeeee, 0 0 20px #295a29, 0 0 20px #21eb3c, 0 0 20px #1bdd25,
+          0 0 10px #17c217, 0 0 20px #2df812, 0 0 20px #63e00f;
+  }
+}
+
+nav {
+  margin-top: 30px;
+}
+
+nav>a {
+  margin: 30px;
+  color: #58F564
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  -webkit-text-stroke: white;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+body{
+    height: 50rem;
+    
+}
+div.gamePiece{
+    transition:all 0.3s ease;
+    display: inline-block;
+    position: absolute;
+    background: blue;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 30px;
+}
+div.gamePiece:hover{
+    background:#53a7ea
+}
+section{
+    position: absolute;
+    width: 50rem;
+    height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    text-align: center;
+    left: 0;
+    right: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    
+}
+h2{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 1 rem;
+    font-size: 40px;
+}
+#welcome{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgb(218, 216, 216);
+    opacity: 90%;
+    transition: all 0.2s ease;
+}
+.button{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 140px;
+    height: 80px;
+    background: rgb(15, 70, 102);
+    text-align: center;
+    font-size: 30px;
+    vertical-align: middle;
+    line-height: 80px;
+    border-radius: 20px;
+    color: antiquewhite;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+#easy{ 
+    left: 10%; 
+    
+}
+
+#hard{
+    left: 70%;
+}
+.button:hover{
+    background:#53a7ea;
+    color: black;
+    animation: wiggle 1s linear infinite;
+}
+
+@keyframes wiggle {
+    0% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(0,10%);
+    }
+   100% {
+
+   }
+}
+#finalScore{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: navy;
+    opacity: 80%;
+    color: antiquewhite;
+    font-size: 35px;
+    visibility: hidden;
+}
+#restart{
+    top:70%;
+    left: 41.1%;
+    opacity: 100%;
+    
+}
+#scoreEl{
+    margin-top: 4px;
+}
+input[type=text]{
+    width:10%;
+    height: 30px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase
+}
+input[type=submit]{
+    cursor: pointer;
+    background: rgb(15, 70, 102);
+    color: antiquewhite;
+    size: 20px 30px;
+}
+.leftRight {
+    width: 100px;
+    height: 100px;
+    
+    animation-name: leftRight;
+    animation-duration: .5s;
+  }
+  .upDown {
+    width: 100px;
+    height: 100px;
+    
+    animation-name: upDown;
+    animation-duration: .5s;
+  }
+  
+
+  @keyframes leftRight {
+    0% {
+        transform: translate(0);
+      }
+      25%{
+        transform: translateX(2px);
+      }
+      50% {
+        transform: translatex(-2px);
+      }
+  }
+  @keyframes upDown {
+    0% {
+        transform: translate(0);
+      }
+      25%{
+        transform: translateY(2px);
+      }
+      50% {
+        transform: translateY(-2px);
+      }
+  }
