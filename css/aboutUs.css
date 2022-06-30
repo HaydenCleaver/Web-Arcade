@@ -10,11 +10,10 @@ script/text: white
   */
 
 .panel--color {
-    transform: perspective (400px);
-    transform: rotateX(45deg);
-    transform: rotateY(45deg);
-    transform: rotateZ(45deg);
-    transform: rotateX(45deg);
+    transform: perspective (400px) rotateX(45deg);
+    transform: perspective (400px) rotateY(45deg);
+    transform: perspective (400px) rotateZ(45deg);
+    transform: perspective (400px) rotateX(45deg);
 }
 
 .scene {
@@ -53,6 +52,10 @@ script/text: white
 }
 
 /* corresponding style */
+.card { 
+    transform-origin: center right; 
+}
+
 .card.ls-flipped {
     transform: rotateY(180deg);
 }

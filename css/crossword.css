@@ -209,6 +209,10 @@ li {
 
 }
 
+#user{
+    display:grid;
+    grid-column: 2;
+}
 #score {
     grid-column: 2;
     justify-self: center;
