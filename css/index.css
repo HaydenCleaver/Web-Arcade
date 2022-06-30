@@ -11,7 +11,7 @@ font-weight: 300;
 body {
 padding-top: 10rem;
 padding-bottom: 10rem- 72px;
-background-image: linear-gradient(180deg, black, gray); 
+background-image: linear-gradient(180deg, #238fa8, #40d2f5); 
 background-repeat: no repeat;
 background-position: center;
 background-attachment: scroll;
@@ -21,30 +21,30 @@ background-size: cover;
 /* For browsers that do not support gradients */
 #grad1 {
     height: 100px;
-    background-color: black; 
-    background-image: linear-gradient(180deg, black, gray);
+    background-color: #238fa8; 
+    background-image: linear-gradient(180deg, #238fa8, #40d2f5);
 }
 
 /* all caps for text */
 h1 {
     text-transform: uppercase;
-    color: white;
+    color: #58f564;
 }
 
 a[href] {
     color: rgb(10, 67, 59);
-    background-color: rgb(255, 184, 20);
+    background-color: blue);
     text-decoration: none;
 }
 
 h3 {
     text-transform: capitalize;
-    color: deeppink;
+    color: blue;
 }
 
 h5 {
     text-transform: capitalize;
-    color: deeppink;
+    color: blue;
 }
 
 /* ol {list-style: none; counter-reset: li}
