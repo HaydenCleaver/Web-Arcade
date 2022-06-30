@@ -5,9 +5,15 @@ h1{
 }
 
 
-
 body {
 background: #33c4f5;;
+}
+
+main{
+    display:grid;
+    grid-template-rows: 600px;
+    grid-template-columns: repeat(3, 545px);
+    justify-content: center;
 }
 
 .puzzlewrap {
@@ -15,24 +21,102 @@ background: #33c4f5;;
     margin: 50px auto;
 }
 
-p {
+li {
     font-family: Arial, Helvetica, sans-serif 22pt; 
-    margin: 20px 20px 0px 45px;
     color: black;
 }
 
 /* style for puzzle */
 #puzzle {
-    padding: 20px;
+    grid-column: 2;
+    justify-items: start;
     display: inline-block;
-    align-content: center;
-    margin-left: 35%;
-    width: 600px;
+    /* align-content: center; */
+    width: 545px;
+    height: 540px;
 }
 
 #puzzle div {
+    display: grid;
+    grid-template-rows: repeat(11, 44px);
+    grid-template-columns: repeat(12,42px);
     width: 100%;
     margin: 0 auto;
+}
+
+#one {
+    float:none;
+    position: absolute;
+    left: 690px;
+    overflow:hidden;
+}
+
+#two {
+    float:none;
+    position: absolute;
+    left: 857px;
+    top: 210px;
+    overflow:hidden;
+}
+
+#three{
+    float:none;
+    position: absolute;
+    left: 732px;
+    top: 345px;
+    overflow:hidden;
+}
+
+#four{
+    float:none;
+    position: absolute;
+    left: 775px;
+    top: 432px;
+    overflow:hidden;
+}
+
+#five{
+    float:none;
+    position: absolute;
+    left: 942px;
+    top: 520px;
+    overflow:hidden;
+}
+#six {
+    float:none;
+    position: absolute;
+    left: 732px;
+    overflow:hidden;
+}
+
+#seven{
+    float:none;
+    position: absolute;
+    left: 857px;
+    overflow:hidden;
+}
+
+#eight{
+    float:none;
+    position: absolute;
+    left: 1026px;
+    top: 210px;
+    overflow:hidden;
+}
+
+#nine {
+    float:none;
+    position: absolute;
+    left: 1110px;
+    top: 210px;
+    overflow:hidden;
+}
+#ten{
+    float:none;
+    position: absolute;
+    left: 773px;
+    top: 345px;
+    overflow:hidden;
 }
 
 .puzzleSquare {
@@ -59,6 +143,24 @@ p {
     color: #33c4f5;
 }
 
+#clues {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 50px;
+}
+
+#clues > div {
+    grid-template-rows: auto;
+    border: solid thin black;
+    background-color: #b8e5f5;
+
+}
+
+#score {
+    grid-column: 2;
+    justify-self: center;
+}
 button::-moz-focus-inner {
     border: none;
     outline: none;
@@ -76,15 +178,15 @@ button::-moz-focus-inner {
 /* indicates that square is part of a word that has been found */
 
 #puzzle .found {
-    color: #33c4f5;
+    color: #fcec09;
 }
 
 #puzzle .solved {
-    color: #33c4f5;
+    color: #faa200;
 }
 
 #puzzle .complete {
-    background-color: #33c4f5;
+    background-color: #fcfcf9;
 }
 
 /* style for the word list */

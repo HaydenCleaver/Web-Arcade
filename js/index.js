@@ -14,10 +14,10 @@ function loadCrosswordScore (){
 function renderScoreReflex(scoreArray){
 
     let scoreResults = scoreArray.sort((a,b) => b.score - a.score);
-    let top = scoreResults.splice(3);
-    console.log(scoreResults)
-    for (let i = 0; i < top.length; i++){
-
+    scoreResults.splice(3);
+    console.log(scoreResults);
+    for (let i = 0; i < scoreResults.length; i++){
+        
         let resultTest = `${scoreResults[i].name} : ${scoreResults[i].score}`
         let chartEl = document.getElementById('reflexChart');
         let resultEl = document.createElement('li');

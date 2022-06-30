@@ -9,19 +9,44 @@ let restartButton = document.getElementById('restart');
 let highScoreEl = document.getElementById('highScore');
 
 
-//Game starting event listener
+//difficulty elements
+let easyEl = document.getElementById("easy");
+let mediumEl = document.getElementById("medium");
+let hardEl = document.getElementById("hard");
 
-startButton.addEventListener('click', function (event) {
+let despawn = 0;
+
+//Game difficulty selection
+easyEl.addEventListener('click', function () {
+    startGame(1000);
+    despawn = 2000;
+})
+mediumEl.addEventListener('click', function () {
+    startGame(800);
+    despawn = 1000;
+})
+hardEl.addEventListener('click', function () {
+    startGame(500);
+    despawn = 600;
+})
+
+
+
+function startGame(speed) {
     startScreen.style.visibility = 'hidden';
-    
     //set how fast spawn is here
-    let start = setInterval(createButton, 1000);//<--Spawn rate
+    let start = setInterval(createButton, speed);//<--Spawn rate
     timer();
     setTimeout(() => {
         clearInterval(start);
     }, timerNum * 1000);
+}
+// });
 
-});
+
+
+
+
 
 //Restart game
 restartButton.addEventListener('click', function () {
@@ -34,7 +59,7 @@ restartButton.addEventListener('click', function () {
 
 //setting global score variable as well as array to save data
 let score = 0;
-let allScores = readScore()|| [];
+let allScores = readScore() || [];
 
 //Click sound effect
 function playSound() {
@@ -90,23 +115,25 @@ function stopGame(game) {
 }
 
 
-
 //button constructor
-function Button(pos1, pos2, pos3, pos4) {
+function Button(pos1, pos2, pos3, pos4, anim) {
     // let newButton = document.createElement('div')
     this.obj = document.createElement('div'),
-        this.obj.classList.add('gamePiece')
-    gameSpace.appendChild(this.obj),
+        this.obj.classList.add('gamePiece'),
+        // this.obj.classList.add('anim'),
+        this.obj.classList.add(`${anim}`),
+        gameSpace.appendChild(this.obj),
         this.obj.style.position = 'absolute',
         this.obj.style.top = `${pos1}%`,
         this.obj.style.right = `${pos2}%`,
         this.obj.style.left = `${pos3}%`,
         this.obj.style.bottom = `${pos4}%`,
 
+
         //this decides how fast the buttons disappear
         setTimeout(() => {
             this.obj.remove()
-        }, 2000);
+        }, despawn);
     this.obj.addEventListener('click', function (event) {
         playSound();
         score += 1;
@@ -116,6 +143,7 @@ function Button(pos1, pos2, pos3, pos4) {
 
 }
 
+
 // Generating random number
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -123,21 +151,28 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
+
+
 // creating button and setting random ints for positions 
 function createButton() {
+    let anim = "";
     let top = getRandomInt(0, 85);
     let right = getRandomInt(0, 91.5);
     let left = getRandomInt(0, 91.5);
     let bottom = getRandomInt(0, 85);
-    let button = new Button(top, right, left, bottom);
+    let wiggleChance = getRandomInt(1,3);
+    if (wiggleChance == 1){
+         anim = 'upDown'; 
+    } else  anim = 'leftRight';
+    new Button(top, right, left, bottom, anim);
 }
 //Currently not being used
 function clearTheBoard() {
-   let pieces = document.querySelectorAll('.gamePiece')
-pieces.forEach(piece =>{
-    piece.remove();
-})
-//  pieces.target.remove();
+    let pieces = document.querySelectorAll('.gamePiece')
+    pieces.forEach(piece => {
+        piece.remove();
+    })
+    //  pieces.target.remove();
 }
 
 //saving and loading score functions
@@ -148,7 +183,7 @@ function saveScore(data) {
 }
 
 function readScore() {
-    
+
     let savedScore = [];
     if (localStorage.getItem('allScores')) {
         savedScore = JSON.parse(localStorage.getItem('allScores'));
@@ -156,7 +191,7 @@ function readScore() {
     }
 }
 
-function calculateHighScore(){
+function calculateHighScore() {
     let highScore = 0
     allScores.forEach(element => {
         if (element > highScore) {
@@ -164,38 +199,40 @@ function calculateHighScore(){
         }
     });
     let save = JSON.stringify(highScore);
-    localStorage.setItem('highScore',save);
+    localStorage.setItem('highScore', save);
     return highScore;
 };
 let formEl = document.getElementById("userInput")
 
 //New user constructor
 
-function User(name,userScore){
-this.name = name;
-this.score = userScore;
+function User(name, userScore) {
+    this.name = name;
+    this.score = userScore;
 
 }
 
-let infoEl =readUser() || [];//<---- User data array
-formEl.addEventListener('submit', function(event){
-    event.preventDefault();
+let infoEl = readUser() || [];//<---- User data array
+formEl.addEventListener('submit', function (event) {
     let UserName = event.target.initials.value;
-    let newUser = new User(UserName,score);
+    UserName = UserName.toUpperCase();
+    let newUser = new User(UserName, score);
     infoEl.push(newUser);
     userSave(infoEl);
 })
 //Saving user data
-function userSave(data){
+function userSave(data) {
     let saveData = JSON.stringify(data);
-    localStorage.setItem('user',saveData);
+    localStorage.setItem('user', saveData);
 }
+
 //reading user data to save to an array
 function readUser() {
-     let savedUser = [];
+    let savedUser = [];
     if (localStorage.getItem('user')) {
         savedUser = JSON.parse(localStorage.getItem('user'));
+        console.log(savedUser);
         return savedUser;
-    } else 
-    return savedUser;
+    } else
+        return savedUser;
 }
