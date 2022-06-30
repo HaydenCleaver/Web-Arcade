@@ -47,8 +47,8 @@ h5 {
     color: deeppink;
 }
 
-ol {list-style: none; counter-reset: li}
+/* ol {list-style: none; counter-reset: li}
 li::before {content: counter(li); color: aquamarine;
     display: inline-block; width: 1em;
     margin-left: -1em}
-    li {counter-increment: li}    
+    li {counter-increment: li}     */
