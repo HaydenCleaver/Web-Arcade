@@ -9,10 +9,19 @@ for (i = 0; i < 50; i++){
     wordKey.push("iv_" + i);
 }
 
-console.log(wordKey);
-console.log(wordKeyVal);
+// console.log(wordKey);
+// console.log(wordKeyVal);
 
 let userScore = 0;
+let puzzleEl = document.querySelectorAll('input');
+
+// function addListener(){  //why isn't event listener working?
+
+//     puzzleEl.forEach(function(input){
+//     input.addEventListener('input', keyCheck);
+// });
+// }
+
 
 function keyCheck(event){
     for (let i = 0; i < wordKey.length; i++){
@@ -26,7 +35,7 @@ function keyCheck(event){
         }
     }
     
-    console.log(event.target.value.toLowerCase())
+    // console.log(event.target.value.toLowerCase())
 }
 
 function scoreRender(){
