@@ -1,0 +1,54 @@
+h1 {
+text-transform: capitalize;
+font-weight: bold;
+
+font-weight: lighter; 
+font-weight: 300;
+}
+
+
+/* color will gradient from black to gray */
+body {
+padding-top: 10rem;
+padding-bottom: 10rem- 72px;
+background-image: linear-gradient(180deg, black, gray); 
+background-repeat: no repeat;
+background-position: center;
+background-attachment: scroll;
+background-size: cover;
+}
+
+/* For browsers that do not support gradients */
+#grad1 {
+    height: 100px;
+    background-color: black; 
+    background-image: linear-gradient(180deg, black, gray);
+}
+
+/* all caps for text */
+h1 {
+    text-transform: uppercase;
+    color: white;
+}
+
+a[href] {
+    color: rgb(10, 67, 59);
+    background-color: rgb(255, 184, 20);
+    text-decoration: none;
+}
+
+h3 {
+    text-transform: capitalize;
+    color: deeppink;
+}
+
+h5 {
+    text-transform: capitalize;
+    color: deeppink;
+}
+
+ol {list-style: none; counter-reset: li}
+li::before {content: counter(li); color: aquamarine;
+    display: inline-block; width: 1em;
+    margin-left: -1em}
+    li {counter-increment: li}    
