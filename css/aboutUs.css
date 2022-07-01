@@ -129,7 +129,9 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    font-family: 'Kantumruy Pro', sans-serif;
+    color: white;
+    -webkit-text-stroke: #000000 .1px;
 }
 
 section {

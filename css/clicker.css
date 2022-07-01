@@ -55,12 +55,6 @@ a:visited {
   text-decoration: none;
 }
 
-
-
-
-
-
-
 body{
     height: 50rem;
     
@@ -91,6 +85,14 @@ section{
     right: 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     
+}
+#Instructions{
+  margin-top: 5rem;
+  font-family: 'Press Start 2P', cursive;
+  color: #58F564;
+  font-size: 30px;
+  -webkit-text-stroke: #000000 .5px;
+
 }
 h2{
     text-align: center;
@@ -162,6 +164,9 @@ h2{
     color: antiquewhite;
     font-size: 35px;
     visibility: hidden;
+}
+#scoreEl{
+  margin-bottom: 30px;
 }
 #restart{
     top:70%;
