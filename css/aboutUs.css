@@ -136,6 +136,9 @@ section {
     padding: 3rem;
     width: 50rem;
     border-radius: 20px;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: space-around;
     font-size: 20px;
     align-items: flex-start;
     margin-bottom: 3rem;
@@ -157,9 +160,68 @@ section {
     float: left;
     margin-right: 50px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-
+    
 }
+
+.image:hover {
+    /* transform: perspective(400px) rotate(45deg); */
+    /* transform: perspective (400px) rotateX(45deg);
+    transform: perspective (400px) rotateY(45deg);
+    transform: perspective (400px) rotateZ(45deg);
+    transform: perspective (400px) rotateX(45deg); */
+    /* transition: width 5s; 
+    transform-style: preserve-3d; */
+    
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 240px;
+    height: 300px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(45deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+.flip-card-front {
+    float: left;
+    margin-right: 50px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border: 1px solid #3be652;
+}
+
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+} 
 
 #Hayden>div {
     text-align: left;
+
+}
+
+p {
+    width: 500px;
 }
