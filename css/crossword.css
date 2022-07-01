@@ -58,7 +58,7 @@ header {
  
 
 body {
-background: #33c4f5;;
+background: #dbe5e9;;
 }
 
 main{
@@ -80,6 +80,7 @@ li {
 
 /* style for puzzle */
 #puzzle {
+    margin-top: 10px;
     grid-column: 2;
     justify-items: start;
     display: inline-block;
@@ -107,7 +108,7 @@ li {
     float:none;
     position: absolute;
     left: 857px;
-    top: 260px;
+    top: 270px;
     overflow:hidden;
 }
 
@@ -115,7 +116,7 @@ li {
     float:none;
     position: absolute;
     left: 732px;
-    top: 395px;
+    top: 402px;
     overflow:hidden;
 }
 
@@ -123,7 +124,7 @@ li {
     float:none;
     position: absolute;
     left: 775px;
-    top: 480px;
+    top: 490px;
     overflow:hidden;
 }
 
@@ -131,7 +132,7 @@ li {
     float:none;
     position: absolute;
     left: 942px;
-    top: 570px;
+    top: 580px;
     overflow:hidden;
 }
 #six {
@@ -152,7 +153,7 @@ li {
     float:none;
     position: absolute;
     left: 1026px;
-    top: 260px;
+    top: 270px;
     overflow:hidden;
 }
 
@@ -160,15 +161,15 @@ li {
     float:none;
     position: absolute;
     left: 1110px;
-    top: 260px;
+    top: 270px;
     overflow:hidden;
 }
 #ten{
     float:none;
     position: absolute;
     left: 773px;
-    top: 395px;
-    overflow:hidden;
+    top: 402px;
+    
 }
 
 .puzzleSquare {
@@ -190,13 +191,20 @@ li {
     width:40px;
     text-transform: uppercase;
     text-align: center;
-    background-color: #33c4f5;
+    background-color: #dbe5e9;
     border: 0;
-    color: #33c4f5;
+    color: #dbe5e9;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #clues {
-    margin-top: 5px;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-height: 50px;
@@ -205,17 +213,62 @@ li {
 #clues > div {
     grid-template-rows: auto;
     border: solid thin black;
-    background-color: #b8e5f5;
+    background-color: #ffffff;
+    padding:50px;
+    width: 240px;
 
 }
 
+.clueList{
+    list-style: decimal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
 #user{
     display:grid;
     grid-column: 2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 #score {
     grid-column: 2;
     justify-self: center;
+    background-color: rgba(0, 0, 0, 0.712);
+    color:#30d42b;
+    border: solid thin #30d42b;
+    padding: 3px;
+}
+
+#userInitials {
+    grid-row: 1;
+}
+
+#userInitials > label {
+    background-color: rgba(0, 0, 0, 0.712);
+    color:#30d42b;
+    border: solid thin #30d42b;
+    padding: 3px;
+}
+
+#userInitials > input {
+    height: 20px;
+}
+button {
+    border-radius: 8px;
+    width: 90px;
+    height: 30px;
+    transition-duration: 0.4s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.712);
+    border: #30d42b;
+    color:#30d42b;
+}
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 button::-moz-focus-inner {
     border: none;
