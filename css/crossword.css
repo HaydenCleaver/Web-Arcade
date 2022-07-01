@@ -59,12 +59,12 @@ header {
  
 
 body {
-background: #dbe5e9;;
+background: #02ecc5;
 }
 
 main{
     display:grid;
-    grid-template-rows: 600px;
+    grid-template-rows: 600px 30px 30px;
     grid-template-columns: repeat(3, 545px);
     justify-content: center;
 }
@@ -126,9 +126,9 @@ sup {
     width:40px;
     text-transform: uppercase;
     text-align: center;
-    background-color: #dbe5e9;
+    background-color: #02ecc5;
     border: 0;
-    color: #dbe5e9;
+    color: #02ecc5;
 }
 
 h3 {
@@ -164,22 +164,27 @@ h3 {
     grid-column: 2;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    margin-left: 40px;
 }
 #score {
-    grid-column: 2;
-    justify-self: center;
-    background-color: rgba(0, 0, 0, 0.712);
+    grid-column: 1;
+    justify-self: left;
+    background-color: rgba(0, 0, 0, 0.911);
     color:#30d42b;
     border: solid thin #30d42b;
     padding: 3px;
+    margin-bottom: 3px;
+    margin-left: 2px;
 }
 
 #userInitials {
-    grid-row: 1;
+    grid-row: 3;
+    grid-column: 1;
+    justify-self: left;
 }
 
 #userInitials > label {
-    background-color: rgba(0, 0, 0, 0.712);
+    background-color: rgba(0, 0, 0, 0.911);
     color:#30d42b;
     border: solid thin #30d42b;
     padding: 3px;
@@ -189,15 +194,16 @@ h3 {
     height: 20px;
 }
 button {
+    grid-row: 3;
     border-radius: 8px;
     width: 90px;
-    height: 30px;
+    height: 35px;
     transition-duration: 0.4s;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 button:hover {
-    background-color: rgba(0, 0, 0, 0.712);
+    background-color: rgba(0, 0, 0, 0.911);
     border: #30d42b;
     color:#30d42b;
 }
@@ -210,70 +216,6 @@ button::-moz-focus-inner {
     outline: none;
 }
 
-/* selected indicates when a square has been selected */
-
-#puzzle .selected {
-    color: #33c4f5;
-    outline: none; }  
-.blue-input:focus{
-    border: none;
-}
-
-/* indicates that square is part of a word that has been found */
-
-#puzzle .found {
-    color: #fcec09;
-}
-
-#puzzle .solved {
-    color: #faa200;
-}
-
-#puzzle .complete {
-    background-color: #fcfcf9;
-}
-
-/* style for the word list */
-
-#word {
-    width: 250px;
-    color: gray;
-    float: left;
-    margin-top: 37px;
-}
-
-#words ul {
-    list-style-type: none;
-}
-
-#words li {
-    padding: 0 0 7px;
-    font-family: sans-serif 1em; 
-    display: block;
-    float: left;
-    width: 100px;
-}
-/* indicates that the word has b een found  */
-#words .wordFound {
-    text-decoration: line-through;
-    color: black;
-}
-
-/* style for the button */
-#solve {
-    margin: 30px 30px 0 40px;
-    background: transparent
-    #c38334;
-    padding: 10px 20px;
-    border: 2px solid; color: #eb744b;
-    border-radius: 25px;
-opacity: 5;
-    transition: opacity .25s ease-in;
-    
-}
-    a :hover,  :gameSolve {
-        opacity: 1;
-    }
 
 
 
