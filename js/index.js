@@ -31,7 +31,7 @@ function renderScoreCrossword(scoreArray){
     console.log(scoreArray);
     let scoreResults = scoreArray.sort((a,b) => b.score - a.score);
     scoreResults.splice(3);
-
+    
     for (let i = 0; i < scoreResults.length; i++){
 
         let resultTest = `${scoreResults[i].name} : ${scoreResults[i].score}`
