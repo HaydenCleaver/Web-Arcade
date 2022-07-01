@@ -19,7 +19,7 @@ function renderScoreReflex(scoreArray){
     console.log(scoreResults);
     for (let i = 0; i < scoreResults.length; i++){
         
-        let resultTest = `${scoreResults[i].name} : ${scoreResults[i].score}`
+        let resultTest = `${scoreResults[i].name}  ${scoreResults[i].score}`
         let chartEl = document.getElementById('reflexChart');
         let resultEl = document.createElement('li');
         chartEl.appendChild(resultEl);
@@ -34,7 +34,7 @@ function renderScoreCrossword(scoreArray){
 
     for (let i = 0; i < scoreResults.length; i++){
 
-        let resultTest = `${scoreResults[i].name} : ${scoreResults[i].score}`
+        let resultTest = `${scoreResults[i].name}  ${scoreResults[i].score}`
         let chartEl = document.getElementById('crosswordChart');
         let resultEl = document.createElement('li');
         chartEl.appendChild(resultEl);
