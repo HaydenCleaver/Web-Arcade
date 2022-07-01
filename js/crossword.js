@@ -38,12 +38,6 @@ function scoreRender(){
     scoreEl.textContent = `User Score: ${userScore}`;
 }
 
-// function clearPuzzle(){
-//     puzzleEl.forEach(function(input){
-//     puzzleEl.textcontent = "";
-//     });
-// }
-
 let userEl = document.getElementById('userInitals');
 
 function saveScore(data) {
