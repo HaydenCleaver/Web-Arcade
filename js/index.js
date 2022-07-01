@@ -1,4 +1,5 @@
 let reflexScore = loadReflexScore() || [];
+
 let crosswordScore = loadCrosswordScore() || [];
 
 function loadReflexScore (){
@@ -7,7 +8,7 @@ function loadReflexScore (){
 }
 
 function loadCrosswordScore (){
-    let stringStore = localStorage.getItem('');
+    let stringStore = localStorage.getItem('userName');
     return JSON.parse(stringStore);
 }
 
@@ -27,7 +28,7 @@ function renderScoreReflex(scoreArray){
 }
 
 function renderScoreCrossword(scoreArray){
-
+    console.log(scoreArray);
     let scoreResults = scoreArray.sort((a,b) => b.score - a.score);
     scoreResults.splice(3);
 
@@ -35,14 +36,14 @@ function renderScoreCrossword(scoreArray){
 
         let resultTest = `${scoreResults[i].name} : ${scoreResults[i].score}`
         let chartEl = document.getElementById('crosswordChart');
-        let resultEl = documnt.createElement('li');
+        let resultEl = document.createElement('li');
         chartEl.appendChild(resultEl);
         resultEl.textContent = resultTest;
     }
 }
 
 renderScoreReflex(reflexScore);
-// renderScoreCrossword(crosswordScore);
+renderScoreCrossword(crosswordScore);
 
 // for (let i = 0; i < scoreArray.length; i++) {
 //     userName = scoreArray[i].name;
