@@ -99,7 +99,7 @@ function checkMatch() {
    cardsChosenIds = []
 
    if (cardsWon.length == (cardArray.length/2)) {
-    resultDisplay.innerHTML = 'You have won!'
+    alert('You found all the cards!')
 }
 
 }
@@ -115,4 +115,5 @@ function flipCard() {
     if (cardsChosen.length === 2) {
         setTimeout(checkMatch, 500)
     }
+
 }
