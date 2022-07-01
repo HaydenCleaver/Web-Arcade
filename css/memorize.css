@@ -54,8 +54,8 @@ header {
     text-decoration: none;
   }
 body {
-    background-image: url(/imgs/pinkcloud.jpg);
-    /* background-size: 100%; */
+    background-image: url('/imgs/pinkcloud.jpg');
+    background-size: 100%;
 }
 
 #grid {
