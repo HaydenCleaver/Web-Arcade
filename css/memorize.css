@@ -1,6 +1,61 @@
+header {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #58F564;
+    background: #2c3233;
+    width: 100%;
+    height: 8rem;
+    margin-bottom: 100px;
+  }
+  
+  h1 {
+    margin-top: 30px;
+    font-size: 2rem;
+    -webkit-text-stroke: white;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #1d1a1a, 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #000000,
+            0 0 10px #3be652, 0 0 10px #30d42b, 0 0 10px #37d628;
+    }
+  
+    to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 20px #295a29, 0 0 20px #21eb3c, 0 0 20px #1bdd25,
+            0 0 10px #17c217, 0 0 20px #2df812, 0 0 20px #63e00f;
+    }
+  }
+  
+  nav {
+    margin-top: 30px;
+  }
+  
+  nav>a {
+    margin: 30px;
+    color: #58F564
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    -webkit-text-stroke: white;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
 body {
     background-image: url(/imgs/pinkcloud.jpg);
-    background-size: 100%;
+    /* background-size: 100%; */
 }
 
 #grid {
@@ -18,22 +73,22 @@ img {
     height: 200px;
 }
 
-header {
+/* header {
 
         text-align: center;
         border: 3px;
-}
+} */
 
 
-h1 {
+/* h1 {
     font-size: 275%;
     
-}
+} */
 
-nav {
+/* nav {
     font-size: 150%; 
     text-align: left;  
-}
+} */
 
 h2 {
     margin: auto;
