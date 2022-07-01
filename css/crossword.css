@@ -98,79 +98,13 @@ li {
     margin: 0 auto;
 }
 
-#one {
-    float:none;
-    position: absolute;
-    left: 690px;
-    overflow:hidden;
+#puzzle > div {
+    position:relative;
 }
 
-#two {
-    float:none;
+sup {
     position: absolute;
-    left: 857px;
-    top: 270px;
-    overflow:hidden;
-}
-
-#three{
-    float:none;
-    position: absolute;
-    left: 732px;
-    top: 402px;
-    overflow:hidden;
-}
-
-#four{
-    float:none;
-    position: absolute;
-    left: 775px;
-    top: 490px;
-    overflow:hidden;
-}
-
-#five{
-    float:none;
-    position: absolute;
-    left: 942px;
-    top: 580px;
-    overflow:hidden;
-}
-#six {
-    float:none;
-    position: absolute;
-    left: 732px;
-    overflow:hidden;
-}
-
-#seven{
-    float:none;
-    position: absolute;
-    left: 857px;
-    overflow:hidden;
-}
-
-#eight{
-    float:none;
-    position: absolute;
-    left: 1026px;
-    top: 270px;
-    overflow:hidden;
-}
-
-#nine {
-    float:none;
-    position: absolute;
-    left: 1110px;
-    top: 270px;
-    overflow:hidden;
-}
-#ten{
-    float:none;
-    position: absolute;
-    left: 773px;
-    top: 402px;
-    
+    margin-left: 2px;
 }
 
 .puzzleSquare {
