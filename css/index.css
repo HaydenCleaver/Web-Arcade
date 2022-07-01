@@ -6,6 +6,7 @@ header {
     background: #2c3233;
     width: 100%;
     height: 8rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
   
   header>div {
@@ -40,7 +41,7 @@ header {
   
   a:link {
     text-decoration: none;
-    font-size: 30px;
+
   }
   
   a:hover {
@@ -63,7 +64,9 @@ background-image: linear-gradient(180deg, #238fa8, #40d2f5);
 background-repeat: no repeat;
 background-position: center;
 background-attachment: scroll;
-background-size: cover;
+background-size:cover ;
+height: 80rem;
+
 }
 
 /* For browsers that do not support gradients */
@@ -79,21 +82,83 @@ h1 {
     color: #58f564;
 }
 
-body>a[href] {
-    color: rgb(10, 67, 59);
-    background-color: blue;
-    text-decoration: none;
-}
+
 
 h3 {
-    text-transform: capitalize;
-    color: blue;
+    color: #58f564;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-decoration: underline;
  
 }
 
 h5 {
     text-transform: capitalize;
-    color: blue;
+    color: #F56A4B;
     font-size: 27px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 30px;
 }
+img{
+  border: thick #58f564 solid;
+  border-radius: 30px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+#imgLinks{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10rem;
+  
 
+}
+ol{
+  
+  text-align: center;
+  padding-top: 20px;
+  font-size: 30px;
+  font-family: 'Press Start 2P', cursive;
+  color: #F56A4B;
+  margin-top: 20px;
+  
+  border-radius: 20px;
+  
+
+}
+li{
+  margin-bottom: 8px;
+}
+.leaderboard{
+  background:#2c3233 ;
+  /* height: 130px; */
+  border-radius: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: auto;
+  margin: 20px auto;
+  padding: .1rem;
+  background-image:url('../img/Index_background_element.jpg');
+  
+}
+footer{
+  margin-top: 20rem;
+  font-family: 'Press Start 2P', cursive;
+  
+
+}
+#background{
+  background-image:url('../img/Index_background_element.jpg');
+}
+.grow{
+  transition: 1s ease;
+  }
+  
+  .grow img:hover{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 1s ease;
+  }

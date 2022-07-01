@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div>
@@ -25,39 +27,52 @@
         </nav>
     </header>
     <main>
+        <div id="background">
 
+        </div>
         <section id="imgLinks">
 
-            <h3><a href="clicker.html">Reflex Game</a></h3>
-            <img id="reflexGame">
-            
-            <h3><a href="crossword.html">Crossword</a></h3>
-            <img id="crossword">
+            <div id="reflex" class="grow">
+                <h3>REFLEX</h3>
+                <a href="clicker.html"><img src="img/Reflex_SS.png" width="350px" height="300px"></a>
+                <div id="reflexScore">
+
+                    <div class="leaderboard">
+                        <h5>High Scores</h5>
+                        <ol id="reflexChart">
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div id="memorize" class="grow">
+                <h3>MEMORIZE</h3>
+                <a href="memorize.html"><img src="img/Memorize_SS.png" width="350px" height="300px"></a>
+            </div>
+            <div id="crossword" class="grow">
+                <H3>CROSSWORD</H3>
+                <a href="crossword.html"><img src="img/Crossword_SS.png" width="350px" height="300px"></a>
+                <div id="crosswordScore">
+
+                    <div class="leaderboard">
+                        <h5>High Scores</h5>
+                        <ol id="crosswordChart">
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
 
         </section>
 
-        <section id="highScores">
-
-            <div id="reflexScore">
-                <h5>'Reflex' High Scores</h5>
-                <ol id="reflexChart">
-                
-                </ol>
-            </div>
-
-            <div id="crosswordScore">
-                <h5>'Crossword' High Scores</h5>
-                <ol id="crosswordChart">
-                    
-                </ol>
-            </div>
-
-        </section>
 
     </main>
     <footer>
-        <a href="aboutUs.html">About Us</a>
+        <p style="text-align:center;">© Copyright Team Gamer</p>
     </footer>
     <script src="js/index.js"></script>
 </body>
+
 </html>
