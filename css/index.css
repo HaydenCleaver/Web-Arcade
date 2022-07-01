@@ -40,6 +40,7 @@ header {
   
   a:link {
     text-decoration: none;
+    font-size: 30px;
   }
   
   a:hover {
@@ -54,9 +55,6 @@ header {
   }
   
   
-  
-
-
 /* color will gradient from black to gray */
 body {
 /* padding-top: 10rem; */
@@ -90,15 +88,12 @@ body>a[href] {
 h3 {
     text-transform: capitalize;
     color: blue;
+ 
 }
 
 h5 {
     text-transform: capitalize;
     color: blue;
+    font-size: 27px;
 }
 
-/* ol {list-style: none; counter-reset: li}
-li::before {content: counter(li); color: aquamarine;
-    display: inline-block; width: 1em;
-    margin-left: -1em}
-    li {counter-increment: li}     */

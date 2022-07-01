@@ -18,9 +18,26 @@ img {
     height: 200px;
 }
 
+header {
+
+        text-align: center;
+        border: 3px;
+}
+
+
+h1 {
+    font-size: 275%;
+    
+}
+
+nav {
+    font-size: 150%; 
+    text-align: left;  
+}
+
 h2 {
     margin: auto;
-    text-align: center;
+    text-align: center;  
 }
 
 h3 {
