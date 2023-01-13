@@ -1,6 +1,6 @@
 # Web-Arcade
 
-## [Website Demo](haydencleaver.github.io/Web-Arcade/) 
+## [Website Demo](https://haydencleaver.github.io/Web-Arcade/) 
 
 ## User Stories
 
